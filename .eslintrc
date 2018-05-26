@@ -1,5 +1,6 @@
 {
   "parser": "babel-eslint",
+  "extends": "airbnb",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true,
@@ -13,7 +14,6 @@
   "plugins": [
     "react"
   ],
-  "extends": ["eslint:recommended", "plugin:react/recommended"],
   "rules": {
     "semi": 2,
     "no-console": 0

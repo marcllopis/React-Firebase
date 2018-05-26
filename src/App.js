@@ -9,9 +9,6 @@ class App extends Component {
       data: null,
       newData: '',
     };
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount() {
@@ -22,14 +19,12 @@ class App extends Component {
     });
   }
 
-  handleChange(e) {
+  handleChange = (e) => {
     const newData = e.target.value;
-    this.setState({
-      newData,
-    });
+    this.setState({ newData });
   }
 
-  handleSubmit(e) {
+  handleSubmit = (e) => {
     e.preventDefault();
     database.ref()
             .child('NEWDATA')
